@@ -25,15 +25,15 @@ body {
     line-height: 1.60;
 }
 
-body .allgames {
-    line-height: 1.50;
-}
-
 .page {
     width: min(732px, calc(100% - 40px));
     margin: 0 auto;
     padding: 15px 0px 50px;
 
+}
+
+.page .allgames {
+    line-height: 1.50;
 }
 
 /* Заголовок */
