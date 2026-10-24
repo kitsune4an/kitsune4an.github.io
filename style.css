@@ -25,6 +25,10 @@ body {
     line-height: 1.60;
 }
 
+body .allgames {
+    line-height: 1.50;
+}
+
 .page {
     width: min(732px, calc(100% - 40px));
     margin: 0 auto;
@@ -102,6 +106,11 @@ a:hover {
 .game-line a {
     color: var(--text);
     text-decoration: underline #eb99a166 1px;
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .game-line a:hover {
