@@ -1,10 +1,10 @@
 /* style.css — оформление в стиле скриншота */
 :root {
-    --bg: #0e0e10;
+    --bg: #07070a;
     --text: #c8c8c8;
     --muted: #a4a3a7;
     --pink: #eb99a1;
-    --letter-bg: #40363a4d;
+    --letter-bg: #40363a33;
     --gold: #ffc83d;
 }
 
