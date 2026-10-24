@@ -156,18 +156,9 @@ a:hover {
     margin: 0 0 16px;
 }
 
-.game-detail ul {
-    margin: 0 0 18px;
-    padding-left: 25px;
-}
-
-.game-detail li {
-    margin: 0 0 5px;
-}
-
 .cover {
     display: block;
-    width: 100%;
+    width: auto;
     max-width: 100%;
     height: auto;
     margin: 0 0 14px;
@@ -179,16 +170,6 @@ a:hover {
     max-width: 100%;
     height: auto;
     margin: 0 0 30px;
-}
-
-.no-cover {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 150px;
-    margin: 0 0 14px;
-    background: var(--letter-bg);
-    color: var(--muted);
 }
 
 .big-rating {
@@ -230,29 +211,6 @@ em {
   margin-bottom: 15px;
 }
 
-/* Небольшая адаптация для телефона */
-@media (max-width: 600px) {
-    .page {
-        width: calc(100% - 30px);
-        padding-top: 14px;
-    }
-
-    .site-header h1 {
-        font-size: 28px;
-    }
-
-    body {
-        font-size: 17px;
-    }
-
-    .letter {
-        margin-top: 16px;
-        margin-bottom: 15px;
-    }
-}
-
-
-
 
 
 /* ==================================================
@@ -266,13 +224,6 @@ em {
     height: 215px;
     object-fit: cover;
     margin: 0 auto 27px;
-}
-
-@media (max-width: 768.0px) {
-  .game-detail .cover {
-    width: 95%;
-    height: 95%;
-  }
 }
 
 .game-detail .cover {
@@ -309,19 +260,6 @@ em {
     line-height: 1.55;
 }
 
-/* Списки */
-.game-detail ul {
-    margin: 0 0 16px;
-    padding-left: 0;
-    list-style: none;
-}
-
-/* Элементы списка */
-.game-detail li {
-    margin: 0;
-    line-height: 1.55;
-}
-
 /* Ссылки "к списку" */
 .game-detail > p:last-child {
     margin-top: 15px;
@@ -338,9 +276,46 @@ em {
     background: var(--pink);
 }
 
-@media (max-width: 768.0px) {
-  .page hr {
-    width: 80%;
-    height: 1px;
-  }
+
+/* Небольшая адаптация для телефона */
+@media (max-width: 768px) {
+    .page {
+        width: 100%;
+	max-width: 100%;
+        padding: 14px 10px 0;
+    }
+
+    .page > :not(a .cover) {
+        
+    }
+
+    .page hr {
+       width: 70%;
+       height: 1px;
+    }
+
+    .site-header h1 {
+        font-size: 28px;
+    }
+
+    body {
+        font-size: 17px;
+    }
+
+    .letter {
+        margin-top: 16px;
+        margin-bottom: 15px;
+    }
+
+    .game-detail .cover {
+        max-width: 100%;
+        height: auto;
+	    display: block;
+    }
+
+    .game-detail a:has(> .cover) {
+        display: block;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
 }
