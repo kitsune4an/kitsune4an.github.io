@@ -92,8 +92,9 @@ a:hover {
 .game-line {
     margin: 0 0 5px;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     width: 100%;
+    min-width: 0;
     gap: 8px;
 }
 
@@ -106,11 +107,15 @@ a:hover {
 .game-line a {
     color: var(--text);
     text-decoration: underline #eb99a166 1px;
-    flex: 1;
     min-width: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.game-line .long {
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .game-line a:hover {
