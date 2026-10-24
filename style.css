@@ -1,0 +1,332 @@
+/* style.css — оформление в стиле скриншота */
+:root {
+    --bg: #0e0e10;
+    --text: #c8c8c8;
+    --muted: #a4a3a7;
+    --pink: #eb99a1;
+    --letter-bg: #40363a4d;
+    --gold: #ffc83d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--bg);
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 1.60;
+}
+
+.page {
+    width: min(732px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 15px 0px 50px;
+
+}
+
+/* Заголовок */
+.site-header {
+    margin: 0 0 0px;
+}
+
+.site-header h1 {
+    margin: 0 0 17px;
+    color: var(--pink);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.site-header p {
+    margin: 0;
+}
+
+/* Ссылки */
+a {
+    color: #696969;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Имя автора */
+.author {
+    display: inline-block;
+    margin: 0 0 0px;
+    color: #696969;
+}
+
+/* Буквенные разделители A / B / C */
+.letter {
+    display: flex;
+    align-items: center;
+    min-height: 20px;
+    line-height: 20px;
+    font-size: 16px;
+    margin: 15px 0 18px;
+    padding: 4px 12px 4px 15px;
+    background: var(--letter-bg);
+    border-left: 2px solid var(--pink);
+}
+
+.letter span {
+    display: block;
+}
+
+/* Строка игры */
+.game-line {
+    margin: 0 0 5px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+}
+
+.game-line .date {
+    margin-left: auto;
+    white-space: nowrap;
+    color: #4e4e4e;
+}
+
+.game-line a {
+    color: var(--text);
+    text-decoration: underline #eb99a166 1px;
+}
+
+.game-line a:hover {
+    color: #eb99a1;
+}
+
+/* Страница отдельной игры */
+.game-detail {
+    margin: 0;
+}
+
+.game-detail h2 {
+    margin: 0 0 18px;
+    color: var(--pink);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.game-detail h3 {
+    margin: 26px 0 9px;
+    color: var(--pink);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.game-detail h4 {
+    font-family: CustomSansSerif,'Lucida Grande',Arial,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+    margin: 18px 0px 7px;
+}
+
+.game-detail p {
+    margin: 0 0 16px;
+}
+
+.game-detail ul {
+    margin: 0 0 18px;
+    padding-left: 25px;
+}
+
+.game-detail li {
+    margin: 0 0 5px;
+}
+
+.cover {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 14px;
+}
+
+.cover-gif {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 30px;
+}
+
+.no-cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    margin: 0 0 14px;
+    background: var(--letter-bg);
+    color: var(--muted);
+}
+
+.big-rating {
+    color: var(--text);
+    font-size: 21px;
+    margin: 0 0 22px;
+    font-weight: 500;
+}
+
+/* Если на странице есть горизонтальные разделители */
+hr {
+    height: 1px;
+    width: 100%;
+    margin: 20px 0;
+    border: 0;
+    background: var(--pink);
+}
+
+/* Текстовые блоки */
+blockquote {
+    margin: 20px 0;
+    line-height: 30px;
+    font-size: 16px;
+    padding: 2px 0 2px 15px;
+    border-left: 2px solid var(--pink);
+    color: var(--text);
+    font-style: italic;
+}
+
+strong {
+    color: #e5e4e7;
+}
+
+em {
+    color: var(--text);
+}
+
+.next {
+  margin-bottom: 15px;
+}
+
+/* Небольшая адаптация для телефона */
+@media (max-width: 600px) {
+    .page {
+        width: calc(100% - 30px);
+        padding-top: 14px;
+    }
+
+    .site-header h1 {
+        font-size: 28px;
+    }
+
+    body {
+        font-size: 17px;
+    }
+
+    .letter {
+        margin-top: 16px;
+        margin-bottom: 15px;
+    }
+}
+
+
+
+
+
+/* ==================================================
+   ДОПОЛНИТЕЛЬНОЕ ПОЗИЦИОНИРОВАНИЕ СТРАНИЦЫ ИГРЫ
+   ================================================== */
+
+/* Обложка */
+.game-detail .cover {
+    display: block;
+    width: 460px;
+    height: 215px;
+    object-fit: cover;
+    margin: 0 auto 27px;
+}
+
+@media (max-width: 768.0px) {
+  .game-detail .cover {
+    width: 95%;
+    height: 95%;
+  }
+}
+
+.game-detail .cover {
+    transition: transform .2s ease, box-shadow .2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.game-detail .cover:hover {
+    transform: scale(1.0);
+    /*box-shadow: 0 8px 25px rgba(0,0,0,.25);*/
+    box-shadow:
+         0 0 0 1px rgba(131,131,131,0.2), 
+         0px 0px 10px rgba(255,255,255,.40)
+}
+
+
+/* Оценка */
+.game-detail .big-rating {
+    margin: 0 0 30px;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* Основной текст */
+.game-detail p {
+    margin: 0 0 16px;
+}
+
+/* Если описания оформлены через h3 */
+.game-detail h3 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.55;
+}
+
+/* Списки */
+.game-detail ul {
+    margin: 0 0 16px;
+    padding-left: 0;
+    list-style: none;
+}
+
+/* Элементы списка */
+.game-detail li {
+    margin: 0;
+    line-height: 1.55;
+}
+
+/* Ссылки "к списку" */
+.game-detail > p:last-child {
+    margin-top: 15px;
+}
+
+/* Горизонтальные линии */
+.game-detail hr,
+.page > hr {
+    width: 400px;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0;
+    background: var(--pink);
+}
+
+@media (max-width: 768.0px) {
+  .page hr {
+    width: 80%;
+    height: 1px;
+  }
+}
