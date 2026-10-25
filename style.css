@@ -274,6 +274,14 @@ em {
     background: var(--pink);
 }
 
+.yellow {
+   color: #ffc83d;
+}
+
+.red {
+   color: red;
+}
+
 
 /* Небольшая адаптация для телефона */
 @media (max-width: 768px) {
